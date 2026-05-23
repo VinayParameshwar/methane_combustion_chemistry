@@ -1,0 +1,7 @@
+# Ignore Everything
+*
+#Allow the following type of files
+!*.py
+!*.md
+!.gitignore
+
