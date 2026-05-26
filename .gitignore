@@ -1,7 +1,12 @@
 # Ignore Everything
 *
+# Include Folder
+!Images/
+!Images/**
+
 #Allow the following type of files
 !*.py
 !*.md
 !.gitignore
+!*.png
 

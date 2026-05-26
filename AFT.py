@@ -32,6 +32,8 @@ def adiabatic_flame_temp(phi,T0, P0, fuel, oxidiser):
 
 
 def plotting(phi,T0, P0,AFT_phi, AFT_T, AFT_P):
+    import matplotlib
+    matplotlib.use('Agg')
     import matplotlib.pyplot as matplot
 
     matplot.figure()
@@ -40,7 +42,7 @@ def plotting(phi,T0, P0,AFT_phi, AFT_T, AFT_P):
     matplot.ylabel('Adiabatic Flame Temperature')
     matplot.title("Adiabatic Flame Temperature vs Equivalence Ratio")
     matplot.grid()
-    matplot.show()
+    matplot.savefig('Images/AFT_vs_phi.png')
 
     matplot.figure()
     matplot.plot(T0, AFT_T)
@@ -48,7 +50,7 @@ def plotting(phi,T0, P0,AFT_phi, AFT_T, AFT_P):
     matplot.ylabel('Adiabatic Flame Temperature')
     matplot.title("Adiabatic Flame Temperature vs Inlet Temperature")
     matplot.grid()
-    matplot.show()
+    matplot.savefig('Images/AFT_vs_T0.png')
 
     matplot.figure()
     matplot.plot(P0, AFT_P)
@@ -56,5 +58,5 @@ def plotting(phi,T0, P0,AFT_phi, AFT_T, AFT_P):
     matplot.ylabel('Adiabatic Flame Temperature')
     matplot.title("Adiabatic Flame Temperature vs Inlet Pressure")
     matplot.grid()
-    matplot.show()
+    matplot.savefig('Images/AFT_vs_P0.png')
     
